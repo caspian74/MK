@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Línea Frontera — Publicidad y ventas para clínicas en Tijuana</title>
-<meta name="description" content="Agencia de publicidad, contenido y SEO local en Tijuana enfocada en generar más pacientes y más ventas, con paneles de KPI claros.">
+<title>Línea Frontera — Publicidad, contenido y SEO en Tijuana</title>
+<meta name="description" content="Agencia de publicidad, contenido y SEO local en Tijuana. Contenido que se ve increíble y resultados que se ven en tu panel de ventas.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
     <div class="nav-links" id="navLinks">
       <a class="link" href="#servicios">Servicios</a>
       <a class="link" href="#paquetes">Paquetes</a>
-      <a class="link" href="#kpi">Resultados</a>
+      <a class="link" href="#resultados">Resultados</a>
       <a class="link" href="auth.html">Iniciar sesión</a>
       <a class="cta-nav" href="auth.html?modo=crear">Crear cuenta</a>
     </div>
@@ -26,15 +26,15 @@
 <section class="hero">
   <div class="blockbg"></div>
   <div class="wrap">
-    <div class="kicker">Publicidad · Contenido · SEO local en Tijuana</div>
-    <h1 id="heroTitle">No vendemos posts.<br>Vendemos <span class="hl">más ventas.</span></h1>
-    <p class="lead" id="heroSubtitle">Línea Frontera diseña y opera campañas de publicidad, contenido y SEO local para clínicas y negocios en Tijuana — todo medido en un panel de KPI claro, no en likes.</p>
+    <div class="kicker" id="heroKicker">Publicidad · Contenido · SEO local en Tijuana</div>
+    <h1 id="heroTitle">Cargando…</h1>
+    <p class="lead" id="heroSubtitle">Cargando…</p>
     <div class="cta-row" id="contacto">
-      <a class="btn btn-primary" href="https://wa.me/525632960874?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20L%C3%ADnea%20Frontera" target="_blank" rel="noopener">
+      <a class="btn btn-primary" id="heroWaBtn" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.148.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.014 2C6.486 2 2 6.486 2 12.014c0 1.987.577 3.83 1.577 5.396L2 22l4.706-1.55a9.945 9.945 0 0 0 5.308 1.532h.004c5.528 0 10.014-4.486 10.014-10.014C22.032 6.486 17.546 2 12.014 2zm0 18.14h-.003a8.14 8.14 0 0 1-4.146-1.135l-.297-.176-3.09.994.994-3.033-.193-.312a8.11 8.11 0 0 1-1.257-4.35c0-4.478 3.647-8.126 8.13-8.126 4.478 0 8.126 3.648 8.126 8.13 0 4.478-3.648 8.008-8.264 8.008z"/></svg>
         Escríbenos por WhatsApp
       </a>
-      <a class="btn btn-outline" href="mailto:rcabrerar17@gmail.com?subject=Quiero%20informaci%C3%B3n%20sobre%20L%C3%ADnea%20Frontera&body=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios.">
+      <a class="btn btn-outline" id="heroEmailBtn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
         Escribir un correo
       </a>
@@ -42,10 +42,19 @@
   </div>
 </section>
 
+<div class="trust-bar">
+  <div class="wrap">
+    <span>📍 Basados en <strong>Tijuana</strong></span>
+    <span>🎯 Enfocados en <strong>resultados medibles</strong></span>
+    <span>🎨 Contenido que <strong>se ve increíble</strong></span>
+    <span>📊 Panel de KPI <strong>incluido</strong></span>
+  </div>
+</div>
+
 <div class="strip">
   <div class="wrap">
-    <h2>Contenido bonito no llena la agenda. Un sistema completo, sí.</h2>
-    <p>Publicidad, contenido y SEO local trabajando juntos, con una sola meta: que más gente encuentre tu negocio, confíe y compre. Todo reportado en números, no en impresiones vacías.</p>
+    <h2 id="stripTitle">Cargando…</h2>
+    <p id="stripText">Cargando…</p>
   </div>
 </div>
 
@@ -55,20 +64,7 @@
       <div class="kicker">Lo que hacemos</div>
       <h2>Tres piezas, un solo resultado: más ventas</h2>
     </div>
-    <div class="services-grid">
-      <div class="service">
-        <h3>Publicidad con enfoque en ventas</h3>
-        <p>Campañas en Meta y Google optimizadas para citas y compras, no para alcance. Presupuesto claro y ajustes semanales según lo que sí convierte.</p>
-      </div>
-      <div class="service">
-        <h3>Creación de contenido</h3>
-        <p>Fotografía, video corto y piezas para redes que generan confianza real — pensado para mover a la gente a agendar, no solo a dar like.</p>
-      </div>
-      <div class="service">
-        <h3>SEO local para vender más</h3>
-        <p>No solo posicionamos tu ficha de Google: la conectamos con ofertas, reseñas y llamados a la acción para que cada búsqueda se convierta en cliente.</p>
-      </div>
-    </div>
+    <div class="services-grid" id="servicesGrid"></div>
   </div>
 </section>
 
@@ -79,47 +75,12 @@
       <h2>Precios accesibles, pensados para negocios locales</h2>
       <p>Sin contratos forzosos de un año. El presupuesto de anuncios se paga aparte, directo a Meta o Google — nunca inflamos ese número.</p>
     </div>
-    <div class="pkg-grid">
-      <div class="pkg">
-        <h3>Arranque</h3>
-        <div class="price"><span id="priceArranque">$4,900</span> <small>MXN / mes</small></div>
-        <ul>
-          <li>SEO local y ficha de Google optimizada</li>
-          <li>Gestión de reseñas</li>
-          <li>4 piezas de contenido al mes</li>
-          <li>Reporte mensual de resultados</li>
-        </ul>
-        <a class="btn btn-outline" href="auth.html?modo=crear&amp;paquete=Arranque">Elegir Arranque</a>
-      </div>
-      <div class="pkg featured">
-        <h3>Crecimiento</h3>
-        <div class="price"><span id="priceCrecimiento">$9,900</span> <small>MXN / mes</small></div>
-        <ul>
-          <li>Todo lo de Arranque</li>
-          <li>Campañas de publicidad en Meta y Google</li>
-          <li>8 piezas de contenido al mes</li>
-          <li>Panel de KPI con acceso en línea</li>
-          <li>Reporte quincenal + ajustes de campaña</li>
-        </ul>
-        <a class="btn btn-primary" href="auth.html?modo=crear&amp;paquete=Crecimiento">Elegir Crecimiento</a>
-      </div>
-      <div class="pkg">
-        <h3>Dominancia</h3>
-        <div class="price"><span id="priceDominancia">$16,500</span> <small>MXN / mes</small></div>
-        <ul>
-          <li>Todo lo de Crecimiento</li>
-          <li>Contenido ilimitado dentro de calendario</li>
-          <li>Optimización semanal de campañas</li>
-          <li>Panel de KPI dedicado + reporte semanal</li>
-          <li>Estrategia de expansión a nuevas sucursales</li>
-        </ul>
-        <a class="btn btn-outline" href="auth.html?modo=crear&amp;paquete=Dominancia">Elegir Dominancia</a>
-      </div>
-    </div>
+    <div class="pkg-grid" id="pkgGrid"></div>
+    <p class="pkg-note">¿Aún no sabes cuál elegir? <a href="https://wa.me/525632960874?text=Hola%2C%20no%20s%C3%A9%20qu%C3%A9%20paquete%20me%20conviene" style="color:var(--cyan)" target="_blank" rel="noopener">Pregúntanos por WhatsApp</a>, sin compromiso.</p>
   </div>
 </section>
 
-<section class="kpi" id="kpi">
+<section class="kpi" id="resultados">
   <div class="wrap">
     <div class="section-head">
       <div class="kicker">Panel de resultados</div>
@@ -134,22 +95,22 @@
       <div class="kpi-cards">
         <div class="kpi-card">
           <div class="label">Visitas a tu ficha</div>
-          <div class="value" id="kpiVisitas">3,240</div>
+          <div class="value" id="kpiVisitas">—</div>
           <div class="delta">↑ 18% vs. mes anterior</div>
         </div>
         <div class="kpi-card">
           <div class="label">Clics a WhatsApp</div>
-          <div class="value" id="kpiClics">412</div>
+          <div class="value" id="kpiClics">—</div>
           <div class="delta">↑ 24% vs. mes anterior</div>
         </div>
         <div class="kpi-card">
           <div class="label">Citas agendadas</div>
-          <div class="value" id="kpiCitas">96</div>
+          <div class="value" id="kpiCitas">—</div>
           <div class="delta">↑ 31% vs. mes anterior</div>
         </div>
         <div class="kpi-card">
           <div class="label">Retorno por peso invertido</div>
-          <div class="value" id="kpiRoas">4.1×</div>
+          <div class="value" id="kpiRoas">—</div>
           <div class="delta">↑ 0.6× vs. mes anterior</div>
         </div>
       </div>
@@ -184,26 +145,48 @@
   </div>
 </section>
 
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Lo que dicen (o dirán)</div>
+      <h2>Aquí van las palabras de nuestros clientes</h2>
+    </div>
+    <div class="testi-grid" id="testiGrid"></div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Preguntas frecuentes</div>
+      <h2>Antes de escribirnos, esto puede ayudarte</h2>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
 <section class="final">
   <div class="wrap">
     <h2>Hablemos de cómo vender más</h2>
     <p>Escríbenos hoy y te damos un diagnóstico gratuito de tu publicidad y presencia digital, sin compromiso.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://wa.me/525632960874?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20con%20L%C3%ADnea%20Frontera" target="_blank" rel="noopener">
+      <a class="btn btn-primary" id="finalWaBtn" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.148.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.014 2C6.486 2 2 6.486 2 12.014c0 1.987.577 3.83 1.577 5.396L2 22l4.706-1.55a9.945 9.945 0 0 0 5.308 1.532h.004c5.528 0 10.014-4.486 10.014-10.014C22.032 6.486 17.546 2 12.014 2zm0 18.14h-.003a8.14 8.14 0 0 1-4.146-1.135l-.297-.176-3.09.994.994-3.033-.193-.312a8.11 8.11 0 0 1-1.257-4.35c0-4.478 3.647-8.126 8.13-8.126 4.478 0 8.126 3.648 8.126 8.13 0 4.478-3.648 8.008-8.264 8.008z"/></svg>
         Escríbenos por WhatsApp
       </a>
-      <a class="btn btn-outline" href="mailto:rcabrerar17@gmail.com?subject=Quiero%20mi%20diagn%C3%B3stico%20gratuito&body=Hola%2C%20me%20interesa%20el%20diagn%C3%B3stico%20gratuito%20de%20L%C3%ADnea%20Frontera.">
+      <a class="btn btn-outline" id="finalEmailBtn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
-        rcabrerar17@gmail.com
+        <span id="finalEmailLabel">Escribir un correo</span>
       </a>
     </div>
   </div>
 </section>
 
 <footer>
-  Línea Frontera · Publicidad y ventas para negocios en Tijuana · <a href="tel:+525632960874">563 296 0874</a>
+  Línea Frontera · Publicidad y ventas para negocios en Tijuana · <a id="footerPhoneLink" href="#"><span id="footerPhoneLabel">—</span></a>
 </footer>
+
+<a class="sticky-wa" id="stickyWaBtn" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
 
 <script src="script.js"></script>
 </body>

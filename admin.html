@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Panel de resultados — Línea Frontera (demo)</title>
+<title>Panel de administrador — Línea Frontera</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="admin-body" data-require="admin">
@@ -39,28 +39,11 @@
     <!-- RESUMEN -->
     <section class="admin-panel-view active" id="resumen">
       <div class="admin-kpi-cards">
-        <div class="kpi-card">
-          <div class="label">Visitas a tu ficha</div>
-          <div class="value">3,240</div>
-          <div class="delta">↑ 18% vs. mes anterior</div>
-        </div>
-        <div class="kpi-card">
-          <div class="label">Clics a WhatsApp</div>
-          <div class="value">412</div>
-          <div class="delta">↑ 24% vs. mes anterior</div>
-        </div>
-        <div class="kpi-card">
-          <div class="label">Citas agendadas</div>
-          <div class="value">96</div>
-          <div class="delta">↑ 31% vs. mes anterior</div>
-        </div>
-        <div class="kpi-card">
-          <div class="label">Retorno por peso invertido</div>
-          <div class="value">4.1×</div>
-          <div class="delta">↑ 0.6× vs. mes anterior</div>
-        </div>
+        <div class="kpi-card"><div class="label">Visitas a tu ficha</div><div class="value">3,240</div><div class="delta">↑ 18% vs. mes anterior</div></div>
+        <div class="kpi-card"><div class="label">Clics a WhatsApp</div><div class="value">412</div><div class="delta">↑ 24% vs. mes anterior</div></div>
+        <div class="kpi-card"><div class="label">Citas agendadas</div><div class="value">96</div><div class="delta">↑ 31% vs. mes anterior</div></div>
+        <div class="kpi-card"><div class="label">Cuentas registradas</div><div class="value" id="resumenClientCount">0</div><div class="delta">Total acumulado</div></div>
       </div>
-
       <div class="chart-card">
         <h3>Citas agendadas por semana</h3>
         <div class="bars">
@@ -70,33 +53,16 @@
           <div class="bar" style="height:100%"><span>Sem 4</span></div>
         </div>
       </div>
-
       <p style="color:var(--muted); font-size:0.85rem;">Datos de ejemplo para mostrar el formato del panel real que recibe cada cliente de Línea Frontera.</p>
     </section>
 
     <!-- CAMPAÑAS -->
     <section class="admin-panel-view" id="campanas">
       <div class="admin-kpi-cards">
-        <div class="kpi-card">
-          <div class="label">Gasto en anuncios</div>
-          <div class="value">$8,400</div>
-          <div class="delta">Meta + Google</div>
-        </div>
-        <div class="kpi-card">
-          <div class="label">Costo por cita</div>
-          <div class="value">$87</div>
-          <div class="delta">↓ 12% vs. mes anterior</div>
-        </div>
-        <div class="kpi-card">
-          <div class="label">Clics en anuncios</div>
-          <div class="value">2,105</div>
-          <div class="delta">↑ 9% vs. mes anterior</div>
-        </div>
-        <div class="kpi-card">
-          <div class="label">Campañas activas</div>
-          <div class="value">3</div>
-          <div class="delta">2 en Meta, 1 en Google</div>
-        </div>
+        <div class="kpi-card"><div class="label">Gasto en anuncios</div><div class="value">$8,400</div><div class="delta">Meta + Google</div></div>
+        <div class="kpi-card"><div class="label">Costo por cita</div><div class="value">$87</div><div class="delta">↓ 12% vs. mes anterior</div></div>
+        <div class="kpi-card"><div class="label">Clics en anuncios</div><div class="value">2,105</div><div class="delta">↑ 9% vs. mes anterior</div></div>
+        <div class="kpi-card"><div class="label">Campañas activas</div><div class="value">3</div><div class="delta">2 en Meta, 1 en Google</div></div>
       </div>
       <div class="chart-card">
         <h3>Rendimiento por campaña</h3>
@@ -106,12 +72,13 @@
           <div class="bar" style="height:60%"><span>Limpieza</span></div>
         </div>
       </div>
+      <p style="color:var(--muted); font-size:0.85rem;">Para editar la campaña específica de un cliente (gasto, citas, ROAS), ve a la pestaña <strong>Clientes</strong> y usa "Editar campaña" en su fila.</p>
     </section>
 
     <!-- CONTENIDO -->
     <section class="admin-panel-view" id="contenido">
       <div class="content-grid">
-        <div class="content-item"><span class="tag">Publicado</span><h4>Antes / después — sonrisa</h4><p>Reel · 1,240 reproducciones</p></div>
+        <div class="content-item"><span class="tag">Publicado</span><h4>Antes / después</h4><p>Reel · 1,240 reproducciones</p></div>
         <div class="content-item"><span class="tag">Publicado</span><h4>Testimonio de paciente</h4><p>Post · 340 interacciones</p></div>
         <div class="content-item"><span class="tag">Programado</span><h4>Promo del mes</h4><p>Historia · sale mañana</p></div>
         <div class="content-item"><span class="tag">En revisión</span><h4>Video del consultorio</h4><p>Reel · esperando aprobación</p></div>
@@ -125,9 +92,7 @@
       <div class="table-card">
         <h3>Leads recientes</h3>
         <table>
-          <thead>
-            <tr><th>Nombre</th><th>Origen</th><th>Servicio de interés</th><th>Estatus</th></tr>
-          </thead>
+          <thead><tr><th>Nombre</th><th>Origen</th><th>Servicio de interés</th><th>Estatus</th></tr></thead>
           <tbody>
             <tr><td>Ana R.</td><td>Meta Ads</td><td>Implantes</td><td><span class="status agendada">Agendada</span></td></tr>
             <tr><td>Carlos M.</td><td>Google</td><td>Ortodoncia</td><td><span class="status contactada">Contactada</span></td></tr>
@@ -139,53 +104,48 @@
       </div>
     </section>
 
-    <!-- CLIENTES (cuentas registradas) -->
+    <!-- CLIENTES -->
     <section class="admin-panel-view" id="clientes">
       <div class="table-card">
         <h3>Cuentas registradas</h3>
         <table>
-          <thead>
-            <tr><th>Nombre</th><th>Negocio</th><th>Correo</th><th>Paquete</th><th>Registrado</th></tr>
-          </thead>
+          <thead><tr><th>Cliente</th><th>Negocio</th><th>Paquete</th><th>Estatus</th><th>ROAS</th><th></th></tr></thead>
           <tbody id="clientsTableBody">
-            <tr><td colspan="5" style="color:var(--muted);">Todavía no hay cuentas creadas.</td></tr>
+            <tr><td colspan="6" style="color:var(--muted);">Todavía no hay cuentas creadas.</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="color:var(--muted); font-size:0.82rem; margin-top:14px;">Esta lista se guarda en este navegador mientras conectamos una base de datos real (por ejemplo Cloudflare D1 o Supabase) que sincronice las cuentas entre todos los dispositivos.</p>
+      <p style="color:var(--muted); font-size:0.82rem; margin-top:14px;">Las cuentas y sus campañas se guardan en este navegador mientras conectamos una base de datos real (Cloudflare D1 o Supabase) que las sincronice entre todos los dispositivos.</p>
     </section>
 
-    <!-- EDITOR DEL SITIO -->
+    <!-- EDITOR DEL SITIO (monstruoso) -->
     <section class="admin-panel-view" id="editor">
-      <div class="table-card" style="max-width:640px;">
-        <h3>Editor del sitio principal</h3>
-        <form id="siteEditorForm" style="display:flex; flex-direction:column; gap:6px;">
-          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">Título principal (hero)</label>
-          <input type="text" id="editHeroTitle" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
-          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">Subtítulo (hero)</label>
-          <textarea id="editHeroSubtitle" rows="3" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px; font-family:'Work Sans',sans-serif;"></textarea>
+      <p style="color:var(--muted); font-size:0.88rem; margin-bottom:20px; max-width:70ch;">Edita cualquier texto, precio, paquete, testimonio o pregunta frecuente de la página principal. Los cambios se guardan al presionar <strong>Guardar todo</strong> y se ven de inmediato en <a href="index.html" style="color:var(--cyan)">la página principal</a>, en este navegador.</p>
 
-          <label style="font-size:0.82rem; color:var(--muted); margin-top:14px;">Precio Arranque</label>
-          <input type="text" id="editPriceArranque" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
-          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">Precio Crecimiento</label>
-          <input type="text" id="editPriceCrecimiento" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
-          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">Precio Dominancia</label>
-          <input type="text" id="editPriceDominancia" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
+      <form id="siteEditorForm">
+        <div id="editorSections"></div>
 
-          <label style="font-size:0.82rem; color:var(--muted); margin-top:14px;">KPI ejemplo — Visitas</label>
-          <input type="text" id="editKpiVisitas" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
-          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">KPI ejemplo — Clics a WhatsApp</label>
-          <input type="text" id="editKpiClics" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
-          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">KPI ejemplo — Citas agendadas</label>
-          <input type="text" id="editKpiCitas" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
-          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">KPI ejemplo — Retorno por peso</label>
-          <input type="text" id="editKpiRoas" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
+        <div class="editor-toolbar">
+          <button type="submit" class="btn btn-primary">Guardar todo</button>
+          <button type="button" class="btn btn-outline" id="resetContentBtn">Restablecer valores originales</button>
+          <span class="save-msg" id="editorSaved"></span>
+        </div>
+      </form>
 
-          <button type="submit" class="btn btn-primary" style="margin-top:22px; justify-content:center;">Guardar cambios</button>
-          <p id="editorSaved" style="color:var(--cyan); font-size:0.85rem; min-height:1.2em; margin-top:8px;"></p>
-        </form>
+      <div class="editor-section" id="jsonAdvancedSection">
+        <button type="button" class="editor-section-head" data-toggle="jsonAdvancedSection">
+          <h3>Modo avanzado — editar todo el sitio como JSON</h3>
+          <span class="plus">+</span>
+        </button>
+        <div class="editor-section-body">
+          <p style="color:var(--muted); font-size:0.82rem;">Control total: copia este JSON, edítalo como quieras y pégalo de vuelta. Útil para reordenar, duplicar o borrar bloques enteros sin usar los formularios de arriba.</p>
+          <textarea id="jsonAdvancedBox" class="json-box"></textarea>
+          <div style="display:flex; gap:12px; margin-top:12px;">
+            <button type="button" class="btn btn-primary btn-sm" id="applyJsonBtn">Aplicar JSON</button>
+            <span class="save-msg" id="jsonSaved"></span>
+          </div>
+        </div>
       </div>
-      <p style="color:var(--muted); font-size:0.82rem; margin-top:14px; max-width:640px;">Los cambios se guardan en este navegador y se reflejan de inmediato en <a href="index.html" style="color:var(--cyan)">la página principal</a>. Cuando conectemos la base de datos, se sincronizarán para todos los visitantes automáticamente.</p>
     </section>
 
     <!-- HERRAMIENTAS -->
@@ -197,6 +157,9 @@
         <a class="content-item" style="text-decoration:none;" href="https://analytics.google.com" target="_blank" rel="noopener"><span class="tag">Estadísticas</span><h4>Google Analytics</h4><p>Tráfico y comportamiento del sitio</p></a>
         <a class="content-item" style="text-decoration:none;" href="https://www.canva.com" target="_blank" rel="noopener"><span class="tag">Contenido</span><h4>Canva</h4><p>Diseño de piezas para redes</p></a>
         <a class="content-item" style="text-decoration:none;" href="https://dash.cloudflare.com" target="_blank" rel="noopener"><span class="tag">Sitio</span><h4>Cloudflare Pages</h4><p>Hosting y dominio lineafrontera.stream</p></a>
+        <a class="content-item" style="text-decoration:none;" href="https://dashboard.stripe.com/payment-links" target="_blank" rel="noopener"><span class="tag">Cobros</span><h4>Stripe Payment Links</h4><p>Crea un link de pago para cada paquete, sin código</p></a>
+        <a class="content-item" style="text-decoration:none;" href="https://www.mercadopago.com.mx/herramientas-para-vender/link-de-pago" target="_blank" rel="noopener"><span class="tag">Cobros</span><h4>Mercado Pago — Link de pago</h4><p>Alternativa local para cobrar en MXN</p></a>
+        <a class="content-item" style="text-decoration:none;" href="https://wa.me/525632960874" target="_blank" rel="noopener"><span class="tag">Contacto</span><h4>Tu WhatsApp</h4><p>Abre tu chat directo</p></a>
       </div>
     </section>
   </main>
