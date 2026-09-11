@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de resultados — Línea Frontera (demo)</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="lf-b">LÍNEA</span><span class="lf-f">FRONTERA</span></div>
+    <nav>
+      <button class="tab-btn active" data-target="resumen">Resumen</button>
+      <button class="tab-btn" data-target="campanas">Campañas</button>
+      <button class="tab-btn" data-target="contenido">Contenido</button>
+      <button class="tab-btn" data-target="leads">Leads</button>
+    </nav>
+    <a class="back" href="index.html">← Volver al sitio</a>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1>Panel de resultados — demo</h1>
+      <select class="range-select">
+        <option>Últimos 30 días</option>
+        <option>Últimos 7 días</option>
+        <option>Este trimestre</option>
+      </select>
+    </div>
+
+    <!-- RESUMEN -->
+    <section class="admin-panel-view active" id="resumen">
+      <div class="admin-kpi-cards">
+        <div class="kpi-card">
+          <div class="label">Visitas a tu ficha</div>
+          <div class="value">3,240</div>
+          <div class="delta">↑ 18% vs. mes anterior</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Clics a WhatsApp</div>
+          <div class="value">412</div>
+          <div class="delta">↑ 24% vs. mes anterior</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Citas agendadas</div>
+          <div class="value">96</div>
+          <div class="delta">↑ 31% vs. mes anterior</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Retorno por peso invertido</div>
+          <div class="value">4.1×</div>
+          <div class="delta">↑ 0.6× vs. mes anterior</div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <h3>Citas agendadas por semana</h3>
+        <div class="bars">
+          <div class="bar" style="height:38%"><span>Sem 1</span></div>
+          <div class="bar" style="height:55%"><span>Sem 2</span></div>
+          <div class="bar" style="height:64%"><span>Sem 3</span></div>
+          <div class="bar" style="height:100%"><span>Sem 4</span></div>
+        </div>
+      </div>
+
+      <p style="color:var(--muted); font-size:0.85rem;">Datos de ejemplo para mostrar el formato del panel real que recibe cada cliente de Línea Frontera.</p>
+    </section>
+
+    <!-- CAMPAÑAS -->
+    <section class="admin-panel-view" id="campanas">
+      <div class="admin-kpi-cards">
+        <div class="kpi-card">
+          <div class="label">Gasto en anuncios</div>
+          <div class="value">$8,400</div>
+          <div class="delta">Meta + Google</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Costo por cita</div>
+          <div class="value">$87</div>
+          <div class="delta">↓ 12% vs. mes anterior</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Clics en anuncios</div>
+          <div class="value">2,105</div>
+          <div class="delta">↑ 9% vs. mes anterior</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Campañas activas</div>
+          <div class="value">3</div>
+          <div class="delta">2 en Meta, 1 en Google</div>
+        </div>
+      </div>
+      <div class="chart-card">
+        <h3>Rendimiento por campaña</h3>
+        <div class="bars">
+          <div class="bar" style="height:80%"><span>Implantes</span></div>
+          <div class="bar" style="height:45%"><span>Ortodoncia</span></div>
+          <div class="bar" style="height:60%"><span>Limpieza</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENIDO -->
+    <section class="admin-panel-view" id="contenido">
+      <div class="content-grid">
+        <div class="content-item"><span class="tag">Publicado</span><h4>Antes / después — sonrisa</h4><p>Reel · 1,240 reproducciones</p></div>
+        <div class="content-item"><span class="tag">Publicado</span><h4>Testimonio de paciente</h4><p>Post · 340 interacciones</p></div>
+        <div class="content-item"><span class="tag">Programado</span><h4>Promo del mes</h4><p>Historia · sale mañana</p></div>
+        <div class="content-item"><span class="tag">En revisión</span><h4>Video del consultorio</h4><p>Reel · esperando aprobación</p></div>
+        <div class="content-item"><span class="tag">Programado</span><h4>Tips de higiene dental</h4><p>Carrusel · sale en 3 días</p></div>
+        <div class="content-item"><span class="tag">Publicado</span><h4>Pregunta frecuente</h4><p>Post · 210 interacciones</p></div>
+      </div>
+    </section>
+
+    <!-- LEADS -->
+    <section class="admin-panel-view" id="leads">
+      <div class="table-card">
+        <h3>Leads recientes</h3>
+        <table>
+          <thead>
+            <tr><th>Nombre</th><th>Origen</th><th>Servicio de interés</th><th>Estatus</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Ana R.</td><td>Meta Ads</td><td>Implantes</td><td><span class="status agendada">Agendada</span></td></tr>
+            <tr><td>Carlos M.</td><td>Google</td><td>Ortodoncia</td><td><span class="status contactada">Contactada</span></td></tr>
+            <tr><td>Priscila V.</td><td>Ficha de Google</td><td>Limpieza dental</td><td><span class="status nueva">Nueva</span></td></tr>
+            <tr><td>José L.</td><td>Meta Ads</td><td>Implantes</td><td><span class="status agendada">Agendada</span></td></tr>
+            <tr><td>Diana H.</td><td>WhatsApp directo</td><td>Consulta general</td><td><span class="status nueva">Nueva</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
