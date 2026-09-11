@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi panel — Línea Frontera</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body" data-require="client">
+
+<div class="dash-header">
+  <a href="index.html" style="text-decoration:none;"><div class="brand"><span class="lf-b">LÍNEA</span><span class="lf-f">FRONTERA</span></div></a>
+  <div style="display:flex; align-items:center; gap:18px;">
+    <span class="who">Hola, <strong id="clientName">—</strong></span>
+    <button class="logout-btn" id="logoutBtn">Cerrar sesión</button>
+  </div>
+</div>
+
+<main class="dash-main">
+  <div class="pkg-banner">
+    <div>
+      <div class="name">Paquete <span id="clientPackage">—</span></div>
+      <div class="sub">Negocio registrado: <span id="clientBusiness">—</span></div>
+    </div>
+    <span class="live-tag"><span class="live-dot"></span> Datos en vivo</span>
+  </div>
+
+  <div class="admin-kpi-cards">
+    <div class="kpi-card">
+      <div class="label">Visitas a tu ficha</div>
+      <div class="value">3,240</div>
+      <div class="delta">↑ 18% vs. mes anterior</div>
+    </div>
+    <div class="kpi-card">
+      <div class="label">Clics a WhatsApp</div>
+      <div class="value">412</div>
+      <div class="delta">↑ 24% vs. mes anterior</div>
+    </div>
+    <div class="kpi-card">
+      <div class="label">Citas agendadas</div>
+      <div class="value">96</div>
+      <div class="delta">↑ 31% vs. mes anterior</div>
+    </div>
+    <div class="kpi-card">
+      <div class="label">Retorno por peso invertido</div>
+      <div class="value">4.1×</div>
+      <div class="delta">↑ 0.6× vs. mes anterior</div>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <h3>Citas agendadas por semana</h3>
+    <div class="bars">
+      <div class="bar" style="height:38%"><span>Sem 1</span></div>
+      <div class="bar" style="height:55%"><span>Sem 2</span></div>
+      <div class="bar" style="height:64%"><span>Sem 3</span></div>
+      <div class="bar" style="height:100%"><span>Sem 4</span></div>
+    </div>
+  </div>
+
+  <div class="content-grid" style="margin-bottom:26px;">
+    <div class="content-item"><span class="tag">Publicado</span><h4>Antes / después</h4><p>Reel · 1,240 reproducciones</p></div>
+    <div class="content-item"><span class="tag">Programado</span><h4>Promo del mes</h4><p>Historia · sale mañana</p></div>
+    <div class="content-item"><span class="tag">En revisión</span><h4>Video del negocio</h4><p>Reel · esperando tu aprobación</p></div>
+  </div>
+
+  <p style="color:var(--muted); font-size:0.85rem;">Estos números son de ejemplo mientras arrancamos tu campaña. En cuanto la base de datos esté conectada, este panel se actualizará automáticamente con tus resultados reales, sin que tengas que recargar nada.</p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

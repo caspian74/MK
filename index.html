@@ -16,8 +16,8 @@
       <a class="link" href="#servicios">Servicios</a>
       <a class="link" href="#paquetes">Paquetes</a>
       <a class="link" href="#kpi">Resultados</a>
-      <a class="link" href="admin.html">Demo del panel</a>
-      <a class="cta-nav" href="#contacto">WhatsApp</a>
+      <a class="link" href="auth.html">Iniciar sesión</a>
+      <a class="cta-nav" href="auth.html?modo=crear">Crear cuenta</a>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
   </nav>
@@ -27,8 +27,8 @@
   <div class="blockbg"></div>
   <div class="wrap">
     <div class="kicker">Publicidad · Contenido · SEO local en Tijuana</div>
-    <h1>No vendemos posts.<br>Vendemos <span class="hl">más ventas.</span></h1>
-    <p class="lead">Línea Frontera diseña y opera campañas de publicidad, contenido y SEO local para clínicas y negocios en Tijuana — todo medido en un panel de KPI claro, no en likes.</p>
+    <h1 id="heroTitle">No vendemos posts.<br>Vendemos <span class="hl">más ventas.</span></h1>
+    <p class="lead" id="heroSubtitle">Línea Frontera diseña y opera campañas de publicidad, contenido y SEO local para clínicas y negocios en Tijuana — todo medido en un panel de KPI claro, no en likes.</p>
     <div class="cta-row" id="contacto">
       <a class="btn btn-primary" href="https://wa.me/525632960874?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20L%C3%ADnea%20Frontera" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.148.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.014 2C6.486 2 2 6.486 2 12.014c0 1.987.577 3.83 1.577 5.396L2 22l4.706-1.55a9.945 9.945 0 0 0 5.308 1.532h.004c5.528 0 10.014-4.486 10.014-10.014C22.032 6.486 17.546 2 12.014 2zm0 18.14h-.003a8.14 8.14 0 0 1-4.146-1.135l-.297-.176-3.09.994.994-3.033-.193-.312a8.11 8.11 0 0 1-1.257-4.35c0-4.478 3.647-8.126 8.13-8.126 4.478 0 8.126 3.648 8.126 8.13 0 4.478-3.648 8.008-8.264 8.008z"/></svg>
@@ -82,18 +82,18 @@
     <div class="pkg-grid">
       <div class="pkg">
         <h3>Arranque</h3>
-        <div class="price">$4,900 <small>MXN / mes</small></div>
+        <div class="price"><span id="priceArranque">$4,900</span> <small>MXN / mes</small></div>
         <ul>
           <li>SEO local y ficha de Google optimizada</li>
           <li>Gestión de reseñas</li>
           <li>4 piezas de contenido al mes</li>
           <li>Reporte mensual de resultados</li>
         </ul>
-        <a class="btn btn-outline" href="https://wa.me/525632960874?text=Hola%2C%20quiero%20el%20paquete%20Arranque%20de%20L%C3%ADnea%20Frontera" target="_blank" rel="noopener">Elegir Arranque</a>
+        <a class="btn btn-outline" href="auth.html?modo=crear&amp;paquete=Arranque">Elegir Arranque</a>
       </div>
       <div class="pkg featured">
         <h3>Crecimiento</h3>
-        <div class="price">$9,900 <small>MXN / mes</small></div>
+        <div class="price"><span id="priceCrecimiento">$9,900</span> <small>MXN / mes</small></div>
         <ul>
           <li>Todo lo de Arranque</li>
           <li>Campañas de publicidad en Meta y Google</li>
@@ -101,11 +101,11 @@
           <li>Panel de KPI con acceso en línea</li>
           <li>Reporte quincenal + ajustes de campaña</li>
         </ul>
-        <a class="btn btn-primary" href="https://wa.me/525632960874?text=Hola%2C%20quiero%20el%20paquete%20Crecimiento%20de%20L%C3%ADnea%20Frontera" target="_blank" rel="noopener">Elegir Crecimiento</a>
+        <a class="btn btn-primary" href="auth.html?modo=crear&amp;paquete=Crecimiento">Elegir Crecimiento</a>
       </div>
       <div class="pkg">
         <h3>Dominancia</h3>
-        <div class="price">$16,500 <small>MXN / mes</small></div>
+        <div class="price"><span id="priceDominancia">$16,500</span> <small>MXN / mes</small></div>
         <ul>
           <li>Todo lo de Crecimiento</li>
           <li>Contenido ilimitado dentro de calendario</li>
@@ -113,7 +113,7 @@
           <li>Panel de KPI dedicado + reporte semanal</li>
           <li>Estrategia de expansión a nuevas sucursales</li>
         </ul>
-        <a class="btn btn-outline" href="https://wa.me/525632960874?text=Hola%2C%20quiero%20el%20paquete%20Dominancia%20de%20L%C3%ADnea%20Frontera" target="_blank" rel="noopener">Elegir Dominancia</a>
+        <a class="btn btn-outline" href="auth.html?modo=crear&amp;paquete=Dominancia">Elegir Dominancia</a>
       </div>
     </div>
   </div>
@@ -134,26 +134,26 @@
       <div class="kpi-cards">
         <div class="kpi-card">
           <div class="label">Visitas a tu ficha</div>
-          <div class="value">3,240</div>
+          <div class="value" id="kpiVisitas">3,240</div>
           <div class="delta">↑ 18% vs. mes anterior</div>
         </div>
         <div class="kpi-card">
           <div class="label">Clics a WhatsApp</div>
-          <div class="value">412</div>
+          <div class="value" id="kpiClics">412</div>
           <div class="delta">↑ 24% vs. mes anterior</div>
         </div>
         <div class="kpi-card">
           <div class="label">Citas agendadas</div>
-          <div class="value">96</div>
+          <div class="value" id="kpiCitas">96</div>
           <div class="delta">↑ 31% vs. mes anterior</div>
         </div>
         <div class="kpi-card">
           <div class="label">Retorno por peso invertido</div>
-          <div class="value">4.1×</div>
+          <div class="value" id="kpiRoas">4.1×</div>
           <div class="delta">↑ 0.6× vs. mes anterior</div>
         </div>
       </div>
-      <p class="kpi-caption">Cifras de ejemplo para mostrar el formato del panel. Los números reales de tu negocio se calculan desde tu primer mes de campaña. <a href="admin.html" style="color:var(--cyan)">Ver demo completa del panel →</a></p>
+      <p class="kpi-caption">Cifras de ejemplo para mostrar el formato del panel. Al crear tu cuenta, tu panel se conecta a los datos reales de tu campaña. <a href="auth.html?modo=crear" style="color:var(--cyan)">Crear cuenta y ver mi panel →</a></p>
     </div>
   </div>
 </section>

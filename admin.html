@@ -6,7 +6,7 @@
 <title>Panel de resultados — Línea Frontera (demo)</title>
 <link rel="stylesheet" href="styles.css">
 </head>
-<body class="admin-body">
+<body class="admin-body" data-require="admin">
 
 <div class="admin-shell">
   <aside class="sidebar">
@@ -16,18 +16,24 @@
       <button class="tab-btn" data-target="campanas">Campañas</button>
       <button class="tab-btn" data-target="contenido">Contenido</button>
       <button class="tab-btn" data-target="leads">Leads</button>
+      <button class="tab-btn" data-target="clientes">Clientes</button>
+      <button class="tab-btn" data-target="editor">Editor del sitio</button>
+      <button class="tab-btn" data-target="herramientas">Herramientas</button>
     </nav>
     <a class="back" href="index.html">← Volver al sitio</a>
   </aside>
 
   <main class="admin-main">
     <div class="admin-topbar">
-      <h1>Panel de resultados — demo</h1>
-      <select class="range-select">
-        <option>Últimos 30 días</option>
-        <option>Últimos 7 días</option>
-        <option>Este trimestre</option>
-      </select>
+      <h1>Panel de administrador</h1>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <select class="range-select">
+          <option>Últimos 30 días</option>
+          <option>Últimos 7 días</option>
+          <option>Este trimestre</option>
+        </select>
+        <button class="logout-btn" id="logoutBtn">Cerrar sesión</button>
+      </div>
     </div>
 
     <!-- RESUMEN -->
@@ -130,6 +136,67 @@
             <tr><td>Diana H.</td><td>WhatsApp directo</td><td>Consulta general</td><td><span class="status nueva">Nueva</span></td></tr>
           </tbody>
         </table>
+      </div>
+    </section>
+
+    <!-- CLIENTES (cuentas registradas) -->
+    <section class="admin-panel-view" id="clientes">
+      <div class="table-card">
+        <h3>Cuentas registradas</h3>
+        <table>
+          <thead>
+            <tr><th>Nombre</th><th>Negocio</th><th>Correo</th><th>Paquete</th><th>Registrado</th></tr>
+          </thead>
+          <tbody id="clientsTableBody">
+            <tr><td colspan="5" style="color:var(--muted);">Todavía no hay cuentas creadas.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color:var(--muted); font-size:0.82rem; margin-top:14px;">Esta lista se guarda en este navegador mientras conectamos una base de datos real (por ejemplo Cloudflare D1 o Supabase) que sincronice las cuentas entre todos los dispositivos.</p>
+    </section>
+
+    <!-- EDITOR DEL SITIO -->
+    <section class="admin-panel-view" id="editor">
+      <div class="table-card" style="max-width:640px;">
+        <h3>Editor del sitio principal</h3>
+        <form id="siteEditorForm" style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">Título principal (hero)</label>
+          <input type="text" id="editHeroTitle" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
+          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">Subtítulo (hero)</label>
+          <textarea id="editHeroSubtitle" rows="3" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px; font-family:'Work Sans',sans-serif;"></textarea>
+
+          <label style="font-size:0.82rem; color:var(--muted); margin-top:14px;">Precio Arranque</label>
+          <input type="text" id="editPriceArranque" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
+          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">Precio Crecimiento</label>
+          <input type="text" id="editPriceCrecimiento" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
+          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">Precio Dominancia</label>
+          <input type="text" id="editPriceDominancia" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
+
+          <label style="font-size:0.82rem; color:var(--muted); margin-top:14px;">KPI ejemplo — Visitas</label>
+          <input type="text" id="editKpiVisitas" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
+          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">KPI ejemplo — Clics a WhatsApp</label>
+          <input type="text" id="editKpiClics" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
+          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">KPI ejemplo — Citas agendadas</label>
+          <input type="text" id="editKpiCitas" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
+          <label style="font-size:0.82rem; color:var(--muted); margin-top:8px;">KPI ejemplo — Retorno por peso</label>
+          <input type="text" id="editKpiRoas" style="background:var(--panel-2); border:1px solid var(--line); color:var(--paper); padding:10px 12px; border-radius:4px;">
+
+          <button type="submit" class="btn btn-primary" style="margin-top:22px; justify-content:center;">Guardar cambios</button>
+          <p id="editorSaved" style="color:var(--cyan); font-size:0.85rem; min-height:1.2em; margin-top:8px;"></p>
+        </form>
+      </div>
+      <p style="color:var(--muted); font-size:0.82rem; margin-top:14px; max-width:640px;">Los cambios se guardan en este navegador y se reflejan de inmediato en <a href="index.html" style="color:var(--cyan)">la página principal</a>. Cuando conectemos la base de datos, se sincronizarán para todos los visitantes automáticamente.</p>
+    </section>
+
+    <!-- HERRAMIENTAS -->
+    <section class="admin-panel-view" id="herramientas">
+      <div class="content-grid">
+        <a class="content-item" style="text-decoration:none;" href="https://business.facebook.com" target="_blank" rel="noopener"><span class="tag">Publicidad</span><h4>Meta Business Suite</h4><p>Administra campañas de Facebook e Instagram</p></a>
+        <a class="content-item" style="text-decoration:none;" href="https://ads.google.com" target="_blank" rel="noopener"><span class="tag">Publicidad</span><h4>Google Ads</h4><p>Campañas de búsqueda y display</p></a>
+        <a class="content-item" style="text-decoration:none;" href="https://business.google.com" target="_blank" rel="noopener"><span class="tag">SEO local</span><h4>Google Business Profile</h4><p>Ficha, reseñas y publicaciones locales</p></a>
+        <a class="content-item" style="text-decoration:none;" href="https://analytics.google.com" target="_blank" rel="noopener"><span class="tag">Estadísticas</span><h4>Google Analytics</h4><p>Tráfico y comportamiento del sitio</p></a>
+        <a class="content-item" style="text-decoration:none;" href="https://www.canva.com" target="_blank" rel="noopener"><span class="tag">Contenido</span><h4>Canva</h4><p>Diseño de piezas para redes</p></a>
+        <a class="content-item" style="text-decoration:none;" href="https://dash.cloudflare.com" target="_blank" rel="noopener"><span class="tag">Sitio</span><h4>Cloudflare Pages</h4><p>Hosting y dominio lineafrontera.stream</p></a>
       </div>
     </section>
   </main>

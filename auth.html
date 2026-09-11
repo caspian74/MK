@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi cuenta — Línea Frontera</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <nav class="nav">
+    <a href="index.html" style="text-decoration:none;"><div class="brand"><span class="lf-b">LÍNEA</span><span class="lf-f">FRONTERA</span></div></a>
+    <div class="nav-links" id="navLinks">
+      <a class="link" href="index.html">Volver al sitio</a>
+    </div>
+  </nav>
+</header>
+
+<section class="auth-section">
+  <div class="wrap auth-wrap">
+    <div class="auth-card">
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Iniciar sesión</button>
+        <button class="auth-tab" data-tab="signup">Crear cuenta</button>
+      </div>
+
+      <!-- LOGIN -->
+      <form id="loginForm" class="auth-form active">
+        <label>Correo</label>
+        <input type="email" id="loginEmail" placeholder="tucorreo@negocio.com" required>
+        <label>Contraseña</label>
+        <input type="password" id="loginPassword" placeholder="••••••••" required>
+        <p class="auth-error" id="loginError"></p>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Entrar</button>
+      </form>
+
+      <!-- SIGNUP -->
+      <form id="signupForm" class="auth-form">
+        <label>Nombre</label>
+        <input type="text" id="signupName" placeholder="Tu nombre" required>
+        <label>Negocio</label>
+        <input type="text" id="signupBusiness" placeholder="Nombre de tu clínica o negocio" required>
+        <label>Correo</label>
+        <input type="email" id="signupEmail" placeholder="tucorreo@negocio.com" required>
+        <label>Contraseña</label>
+        <input type="password" id="signupPassword" placeholder="Mínimo 6 caracteres" minlength="6" required>
+        <label>Paquete de interés</label>
+        <select id="signupPackage">
+          <option value="Arranque">Arranque — $4,900/mes</option>
+          <option value="Crecimiento">Crecimiento — $9,900/mes</option>
+          <option value="Dominancia">Dominancia — $16,500/mes</option>
+          <option value="Aún no sé">Aún no sé, quiero asesoría</option>
+        </select>
+        <p class="auth-error" id="signupError"></p>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Crear cuenta</button>
+      </form>
+
+      <p class="auth-note">Tu panel se llena hoy con datos de ejemplo. En cuanto conectemos tu campaña real, verás tus números reales aquí mismo.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Línea Frontera · Publicidad y ventas para negocios en Tijuana · <a href="tel:+525632960874">563 296 0874</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
